@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <div>
+        {% block content %}
+        /* marks the start of a section that child templates can fill or override */
+        <h1>Home Page</h1>
+        <p>Hellews, {{ name}}</p>
+        /* the end of the section */
+        {% endblock %}
+    </div>
+    <script 
+    type="text/javascript" 
+    src="{{url_for('static', filename='index.js')}}">
+    /*specifying that the included file is a js file */
+    /*using flask url_for function to dynamically generate the URL for js file */
+</script>
+</body>
+</html>
